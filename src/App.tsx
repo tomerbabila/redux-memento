@@ -1,11 +1,15 @@
 import React from 'react';
 import CounterUseMemento from './components/CounterUseMemento';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 const App = () => {
   return (
-    <div className='app'>
-      <CounterUseMemento />
-    </div>
+    <Provider store={store}>
+      <div className='app'>
+        <CounterUseMemento />
+      </div>
+    </Provider>
   );
 };
 
