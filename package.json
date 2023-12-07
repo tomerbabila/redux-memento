@@ -1,0 +1,31 @@
+{
+  "name": "redux-memento",
+  "version": "1.0.0",
+  "description": "A redux-toolkit slice implementation for history state management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomerbabila/redux-memento.git"
+  },
+  "keywords": [
+    "redux-toolkit",
+    "redux",
+    "memento",
+    "history"
+  ],
+  "author": "Tomer Babila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomerbabila/redux-memento/issues"
+  },
+  "homepage": "https://github.com/tomerbabila/redux-memento#readme",
+  "devDependencies": {
+    "@types/react": "^18.2.42",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
+  }
+}
