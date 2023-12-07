@@ -1,3 +1,3 @@
-import MyCounter from './App';
+import MyCounter from './App'
 
-export { MyCounter };
+export { MyCounter }
