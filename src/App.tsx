@@ -1,26 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import CounterUseMemento from './components/CounterUseMemento';
 
-type Props = {
-  value?: number;
-};
-const MyCounter = ({ value = 0 }: Props) => {
-  const [counter, setCounter] = useState(value);
-
-  const onMinus = () => {
-    setCounter((prev) => prev - 1);
-  };
-
-  const onPlus = () => {
-    setCounter((prev) => prev + 1);
-  };
-
+const App = () => {
   return (
-    <div>
-      <h1>Counter: {counter}</h1>
-      <button onClick={onMinus}>-</button>
-      <button onClick={onPlus}>+</button>
+    <div className='app'>
+      <CounterUseMemento />
     </div>
   );
 };
 
-export default MyCounter;
+export default App;

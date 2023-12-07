@@ -1,3 +1,4 @@
 import MyCounter from './App';
+import { useMemento } from './hooks';
 
-export { MyCounter };
+export { MyCounter, useMemento };
