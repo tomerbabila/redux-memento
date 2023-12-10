@@ -1,4 +1,5 @@
-import MyCounter from './App';
 import { useMemento } from './hooks';
+import createMementoSlice, { IMementoSlice } from './features/shared/mementoSlice';
+import { mementoMiddleware } from './middlewares';
 
-export { MyCounter, useMemento };
+export { createMementoSlice, mementoMiddleware, IMementoSlice, useMemento };

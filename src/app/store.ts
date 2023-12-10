@@ -1,12 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { Store, configureStore } from '@reduxjs/toolkit';
 import CounterReducer from '../features/counter/counterSlice';
 import mementoMiddleware from '../middlewares/mementoMiddleware';
 
-export const store = configureStore({
+export const store: Store = configureStore({
   reducer: {
     counter: CounterReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(mementoMiddleware.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(mementoMiddleware('counter').middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

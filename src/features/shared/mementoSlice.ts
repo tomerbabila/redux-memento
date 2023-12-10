@@ -1,4 +1,4 @@
-import { createSlice, SliceCaseReducers, ValidateSliceCaseReducers, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, SliceCaseReducers, ValidateSliceCaseReducers, PayloadAction, Draft } from '@reduxjs/toolkit';
 
 export interface IMementoSlice<T> {
   data: T;
@@ -39,8 +39,7 @@ const createMementoSlice = <T, Reducers extends SliceCaseReducers<IMementoSlice<
       },
       setHistory: (state, action: PayloadAction<T>) => {
         const prevHistory = state.history;
-        // @ts-ignore // TODO: remove this ignore
-        state.history = [...prevHistory.slice(0, state.currentHistoryIndex + 1), action.payload];
+        state.history = [...prevHistory.slice(0, state.currentHistoryIndex + 1), action.payload] as Draft<T>[];
         state.currentHistoryIndex = state.currentHistoryIndex + 1;
       },
       ...reducers,
