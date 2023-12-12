@@ -1,12 +1,19 @@
-import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
-import { increment, decrement, setHistory } from '../features/counter/counterSlice';
-import { RootState } from '../app/store';
+import {
+  ActionCreatorWithoutPayload,
+  Store,
+  configureStore,
+  createListenerMiddleware,
+  isAnyOf,
+} from '@reduxjs/toolkit';
 
-function mementoMiddleware(sliceName: keyof RootState) {
+const store: Store = configureStore({ reducer: {} });
+export type RootState = ReturnType<typeof store.getState>;
+
+function mementoMiddleware(sliceName: keyof RootState, setHistory: any, matchers: ActionCreatorWithoutPayload[]) {
   const middleware = createListenerMiddleware();
 
   middleware.startListening({
-    matcher: isAnyOf(increment, decrement),
+    matcher: isAnyOf(...matchers),
     effect: (action, listenerApi) => {
       const currentState = listenerApi.getState() as RootState;
 

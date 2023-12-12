@@ -1,5 +1,5 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
-import createMementoSlice, { IMementoSlice } from '../shared/mementoSlice';
+import createMementoSlice, { IMementoSlice } from '../../../../src/features/shared/mementoSlice';
 
 export interface ICounter {
   value: number;
