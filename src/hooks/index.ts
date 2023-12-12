@@ -1,1 +1,3 @@
-export * from './useMemento';
+import useMemento from './useMemento';
+
+export { useMemento };

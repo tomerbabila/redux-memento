@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export const useMemento = <T>(initialState: T) => {
+const useMemento = <T>(initialState: T) => {
   const [state, setState] = useState<T>(initialState);
   const [history, setHistory] = useState<T[]>([initialState]);
   const [index, setIndex] = useState<number>(0);
@@ -32,3 +32,5 @@ export const useMemento = <T>(initialState: T) => {
 
   return [state, setAndSaveState, { undo, redo }] as const;
 };
+
+export default useMemento;

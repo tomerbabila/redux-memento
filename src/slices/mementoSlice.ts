@@ -1,10 +1,5 @@
 import { createSlice, SliceCaseReducers, ValidateSliceCaseReducers, PayloadAction, Draft } from '@reduxjs/toolkit';
-
-export interface IMementoSlice<T> {
-  data: T;
-  history: T[];
-  currentHistoryIndex: number;
-}
+import { IMementoSlice } from '../types';
 
 const createMementoSlice = <T, Reducers extends SliceCaseReducers<IMementoSlice<T>>>({
   name = '',

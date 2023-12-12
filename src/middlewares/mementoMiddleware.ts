@@ -1,7 +1,5 @@
-import { ActionCreatorWithoutPayload, configureStore, createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
-
-type StoreType = ReturnType<typeof configureStore>;
-type RootState = ReturnType<StoreType['getState']>;
+import { ActionCreatorWithoutPayload, createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
+import { RootState } from '../types';
 
 function mementoMiddleware(sliceName: keyof RootState, setHistory: any, matchers: ActionCreatorWithoutPayload[]) {
   const middleware = createListenerMiddleware();
