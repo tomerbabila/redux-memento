@@ -1,6 +1,6 @@
 import { Store, configureStore } from '@reduxjs/toolkit';
 import CounterReducer, { decrement, increment, setHistory } from '../features/counter/counterSlice';
-import mementoMiddleware from '../../../src/middlewares/mementoMiddleware';
+import { mementoMiddleware } from 'redux-memento';
 
 export const store: Store = configureStore({
   reducer: {
