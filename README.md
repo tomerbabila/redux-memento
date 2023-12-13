@@ -1,5 +1,7 @@
 ### Redux Memento Library
 
+[![npm version](https://badge.fury.io/js/redux-memento.svg)](https://badge.fury.io/js/redux-memento)
+
 ## Overview
 
 Redux Memento is a library designed to simplify state management in Redux-toolkit applications by providing a mechanism for undo and redo functionality. This library integrates seamlessly with Redux-toolkit, allowing developers to create slices and middleware that support these time-traveling features.
