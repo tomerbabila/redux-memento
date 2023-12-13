@@ -1,4 +1,4 @@
-import type { PayloadAction } from '@reduxjs/toolkit';
+import { PayloadAction } from '@reduxjs/toolkit';
 import { createMementoSlice, IMementoSlice } from 'redux-memento';
 
 export interface ICounter {

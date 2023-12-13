@@ -1,13 +1,16 @@
 import { ActionCreatorWithoutPayload, createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
-import { RootState } from '../types';
 
-function mementoMiddleware(sliceName: keyof RootState, setHistory: any, matchers: ActionCreatorWithoutPayload[]) {
+function mementoMiddleware<R extends Record<string, any>>(
+  sliceName: keyof R,
+  setHistory: any,
+  matchers: ActionCreatorWithoutPayload[],
+) {
   const middleware = createListenerMiddleware();
 
   middleware.startListening({
     matcher: isAnyOf(...matchers),
     effect: (_, listenerApi) => {
-      const currentState = listenerApi.getState() as RootState;
+      const currentState = listenerApi.getState() as R;
 
       const { data } = currentState[sliceName];
 
