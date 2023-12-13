@@ -1,6 +1,6 @@
 {
   "name": "redux-memento",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A redux-toolkit slice implementation for history state management",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

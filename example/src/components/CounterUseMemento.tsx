@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMemento } from 'redux-memento';
+import { useMemento } from '../hooks';
 
 const CounterUseMemento = () => {
   const [count, setCount, { undo, redo }] = useMemento<number>(0);
