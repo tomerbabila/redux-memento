@@ -15,6 +15,6 @@
         "react-dom": "^18.2.0"
     },
     "dependencies": {
-        "redux-memento": "^1.0.5"
+        "redux-memento": "^1.1.0"
     }
 }
