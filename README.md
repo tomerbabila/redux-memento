@@ -1,4 +1,4 @@
-### Redux Memento Library
+# Redux Memento Library
 
 [![npm version](https://badge.fury.io/js/redux-memento.svg)](https://badge.fury.io/js/redux-memento)
 
@@ -133,9 +133,11 @@ export default function CounterMementoSlice() {
 }
 ```
 
+You can see the full example in the `example` folder
+
 ## How it works
 
-You can read the read the story I went trough in **this article**
+You can read the read the story I went trough in [this article]()
 
 ## Contributing
 
