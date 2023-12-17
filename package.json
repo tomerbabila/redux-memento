@@ -22,7 +22,8 @@
     "redux-toolkit",
     "redux",
     "memento",
-    "history"
+    "history",
+    "react"
   ],
   "author": "Tomer Babila",
   "license": "MIT",

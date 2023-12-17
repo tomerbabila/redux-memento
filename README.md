@@ -4,17 +4,17 @@
 
 ## Overview
 
-Redux Memento is a library designed to simplify state management in Redux-toolkit applications by providing a mechanism for undo and redo functionality. This library integrates seamlessly with Redux-toolkit, allowing developers to create slices and middleware that support these time-traveling features.
+This library designed to simplify state management in Redux-toolkit applications by providing a mechanism for undo and redo functionality. The library integrates seamlessly with Redux-toolkit, allowing developers to create slices and middleware that support these time-traveling features.
 
 ## Installation
 
-Using npm:
+Using NPM:
 
 ```bash
 npm install redux-memento
 ```
 
-Or via yarn:
+or via Yarn:
 
 ```bash
 yarn add redux-memento
@@ -22,7 +22,7 @@ yarn add redux-memento
 
 ## Usage
 
-1. Define State and Reducers Types using `IMementoSlice`:
+1. Define state and reducers types using `IMementoSlice`:
 
 ```typescript
 import { PayloadAction } from '@reduxjs/toolkit';
@@ -133,11 +133,11 @@ export default function CounterMementoSlice() {
 }
 ```
 
-You can see the full example in the `example` folder
+You can see the full example in the `example` folder.
 
 ## How it works
 
-You can read the read the story I went trough in [this article]()
+You can read the read the story I went trough in [this article](https://medium.com/@tomer.babila/time-travel-in-react-made-easy-navigate-in-state-history-using-hooks-and-redux-toolkit-1f6932ec00b4).
 
 ## Contributing
 
@@ -147,7 +147,7 @@ After you finished your development, just make a PR.
 
 ## Installation
 
-1. Clone your forked repository:
+1. Clone the repository and make a fork:
 
 ```bash
 git clone https://github.com/tomerbabila/redux-memento.git
@@ -165,15 +165,15 @@ git checkout -b feature/your-feature-name
 npm ci
 ```
 
-4. If you wish to run the example app, use this command before:
+4. If you wish to run the example app, run this command before:
 
 ```bash
 npm link ../node_modules/react
 ```
 
-> This step is according to the first answer in [this stackoverflow](https://stackoverflow.com/questions/56663785/invalid-hook-call-hooks-can-only-be-called-inside-of-the-body-of-a-function-com)
+> This step is according to [the first answer in this stackoverflow](https://stackoverflow.com/questions/56663785/invalid-hook-call-hooks-can-only-be-called-inside-of-the-body-of-a-function-com).
 
-5. make sure that everything is ok using this commands:
+5. Before pushing, make sure that everything is OK using these commands:
 
 ```bash
 npm run prepare
